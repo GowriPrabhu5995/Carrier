@@ -1,0 +1,19 @@
+[
+	{
+		"ASMLogin_ID": "Ine00913",
+		  "Password": "password",
+		  "ChannelPartner_Code": "834911",
+		  "ShipToAddressCode": "1967391",
+		  "ProductsToBuy": [
+		    "224050092290@CMI",
+		    "224050091400@CMI",
+		    "224050091490@CMI",
+		    "224050089000@CMI"
+		  ],
+		  "quantity": "2",
+		  "BranchManager_ID": "Ine00688",
+		  "EditedQty": "5"
+	
+		
+	}
+]

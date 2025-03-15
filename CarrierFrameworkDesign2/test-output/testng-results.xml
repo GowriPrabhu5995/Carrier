@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-13T18:05:39 IST" name="Default suite" finished-at="2025-03-13T18:07:11 IST" duration-ms="92526">
+    <groups>
+      <group name="withoutEdit">
+        <method signature="PO_CreationUsing_JsonData.LoginAsCPandConfirmDirectly(java.util.HashMap)[pri:0, instance:GowriPrabhu.Test.PO_CreationUsing_JsonData@3f0846c6]" name="LoginAsCPandConfirmDirectly" class="GowriPrabhu.Test.PO_CreationUsing_JsonData"/>
+        <method signature="PO_CreationUsing_JsonData.Branch_Manage_Approval(java.util.HashMap)[pri:0, instance:GowriPrabhu.Test.PO_CreationUsing_JsonData@3f0846c6]" name="Branch_Manage_Approval" class="GowriPrabhu.Test.PO_CreationUsing_JsonData"/>
+      </group> <!-- withoutEdit -->
+      <group name="orderFlow">
+        <method signature="PO_CreationUsing_JsonData.CreatePurchaseOrder(java.util.HashMap)[pri:0, instance:GowriPrabhu.Test.PO_CreationUsing_JsonData@3f0846c6]" name="CreatePurchaseOrder" class="GowriPrabhu.Test.PO_CreationUsing_JsonData"/>
+      </group> <!-- orderFlow -->
+    </groups>
+    <test started-at="2025-03-13T18:05:39 IST" name="Default test" finished-at="2025-03-13T18:07:11 IST" duration-ms="92526">
+      <class name="GowriPrabhu.Test.PO_CreationUsing_JsonData">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:GowriPrabhu.Test.PO_CreationUsing_JsonData@3f0846c6]" started-at="2025-03-13T18:05:39 IST" name="launchApplication" finished-at="2025-03-13T18:05:41 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="CreatePurchaseOrder(java.util.HashMap)[pri:0, instance:GowriPrabhu.Test.PO_CreationUsing_JsonData@3f0846c6]" started-at="2025-03-13T18:05:42 IST" name="CreatePurchaseOrder" data-provider="purchaseOrderData" finished-at="2025-03-13T18:06:36 IST" duration-ms="54591" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ShipToAddressCode=1967391, ProductsToBuy=[224050092290@CMI, 224050091400@CMI, 224050091490@CMI, 224050089000@CMI], quantity=2, BranchManager_ID=Ine00688, ChannelPartner_Code=834911, EditedQty=5, ASMLogin_ID=Ine00913, Password=password}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreatePurchaseOrder -->
+        <test-method signature="LoginAsCPandConfirmDirectly(java.util.HashMap)[pri:0, instance:GowriPrabhu.Test.PO_CreationUsing_JsonData@3f0846c6]" started-at="2025-03-13T18:06:36 IST" name="LoginAsCPandConfirmDirectly" data-provider="purchaseOrderData" finished-at="2025-03-13T18:06:55 IST" depends-on-methods="GowriPrabhu.Test.PO_CreationUsing_JsonData.CreatePurchaseOrder" duration-ms="18685" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ShipToAddressCode=1967391, ProductsToBuy=[224050092290@CMI, 224050091400@CMI, 224050091490@CMI, 224050089000@CMI], quantity=2, BranchManager_ID=Ine00688, ChannelPartner_Code=834911, EditedQty=5, ASMLogin_ID=Ine00913, Password=password}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginAsCPandConfirmDirectly -->
+        <test-method signature="Branch_Manage_Approval(java.util.HashMap)[pri:0, instance:GowriPrabhu.Test.PO_CreationUsing_JsonData@3f0846c6]" started-at="2025-03-13T18:06:55 IST" name="Branch_Manage_Approval" data-provider="purchaseOrderData" finished-at="2025-03-13T18:07:11 IST" depends-on-methods="GowriPrabhu.Test.PO_CreationUsing_JsonData.LoginAsCPandConfirmDirectly" duration-ms="15963" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ShipToAddressCode=1967391, ProductsToBuy=[224050092290@CMI, 224050091400@CMI, 224050091490@CMI, 224050089000@CMI], quantity=2, BranchManager_ID=Ine00688, ChannelPartner_Code=834911, EditedQty=5, ASMLogin_ID=Ine00913, Password=password}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Branch_Manage_Approval -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:GowriPrabhu.Test.PO_CreationUsing_JsonData@3f0846c6]" started-at="2025-03-13T18:07:11 IST" name="tearDown" finished-at="2025-03-13T18:07:11 IST" duration-ms="555" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- GowriPrabhu.Test.PO_CreationUsing_JsonData -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

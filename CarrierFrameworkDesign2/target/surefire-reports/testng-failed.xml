@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="GowriPrabhu.TestComponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" verbose="0">
+    <classes>
+      <class name="GowriPrabhu.Test.PO_Creation">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="tearDown"/>
+          <include name="CreatePurchaseOrder"/>
+          <include name="Branch_Manage_Approval"/>
+          <include name="LoginAsCPandConfirmDirectly" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- GowriPrabhu.Test.PO_Creation -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
