@@ -37,25 +37,25 @@ public class StandAloneTest {
 		lp.goTostaticurl();
 		lp.login("ine00913", "password");
 		lp.getLoginMsg();
+		
+		CreatePurchaseOrder C_PO = new CreatePurchaseOrder(driver);
+		C_PO.MouseHoverToSalesManagement();
+		C_PO.LaunchCreatePruchaseOrder();
+		C_PO.SelectChannelPartner(CP_CODE);
+		// C_PO.SelectOrg(Division);
+		C_PO.SelectBillToAddress();
+		C_PO.SelectShipToAddress(ShipToAddressCode);
+		C_PO.ClickOnAddProductsButton();
+		C_PO.AddItems(productToBuy);
+		C_PO.ViewTheSelectedProductDetails(productToBuy, quantity);
+		 C_PO.SaveAsDraft();
+		 ViewPurchaseOrderPage View_PO = new ViewPurchaseOrderPage(driver);
+		View_PO.getDmsPurchaseOrderNo();
+		
 //		
-//		CreatePurchaseOrder C_PO = new CreatePurchaseOrder(driver);
-//		C_PO.MouseHoverToSalesManagement();
-//		C_PO.LaunchCreatePruchaseOrder();
-//		C_PO.SelectChannelPartner(CP_CODE);
-//		// C_PO.SelectOrg(Division);
-//		C_PO.SelectBillToAddress();
-//		C_PO.SelectShipToAddress(ShipToAddressCode);
-//		C_PO.ClickOnAddProductsButton();
-//		C_PO.AddItems(productToBuy);
-//		C_PO.ViewTheSelectedProductDetails(productToBuy, quantity);
-//		 C_PO.SaveAsDraft();
-//		 ViewPurchaseOrderPage View_PO = new ViewPurchaseOrderPage(driver);
-//		View_PO.getDmsPurchaseOrderNo();
-		
-		
-		new CreatePurchaseOrder(driver).MouseHoverToSalesManagement().LaunchCreatePruchaseOrder().SelectChannelPartner(CP_CODE)
-		.SelectBillToAddress().SelectShipToAddress(ShipToAddressCode).ClickOnAddProductsButton()
-		.AddItems(productToBuy).ViewTheSelectedProductDetails(productToBuy,quantity);
+//		new CreatePurchaseOrder(driver).MouseHoverToSalesManagement().LaunchCreatePruchaseOrder().SelectChannelPartner(CP_CODE)
+//		.SelectBillToAddress().SelectShipToAddress(ShipToAddressCode).ClickOnAddProductsButton()
+//		.AddItems(productToBuy).ViewTheSelectedProductDetails(productToBuy,quantity);
 
 		 
 //		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

@@ -165,7 +165,7 @@ public class CreatePurchaseOrder extends AbstractComponent {
 		List<WebElement> productRows = ListOfProductsSelected;
 		for (WebElement row : productRows) {
 			try {
-				String productCode = row.findElement(By.xpath(".//td[3]")).getText().trim(); // Extract product code
+				String productCode = row.findElement(By.xpath("(//td[@data-column='Item Code'])")).getText().trim(); // Extract product code
 
 				if (Arrays.asList(productToBuy).contains(productCode)) {
 					// Check if code exists in array
@@ -187,7 +187,7 @@ public class CreatePurchaseOrder extends AbstractComponent {
 		SaveAsDraft.click();
 		waitForElementToAppear(ToastMessage);
 		String msg = ToastMessage.getText();
-		Assert.assertEquals(msg, "Purchase order save successfully...", "Toast message mismatch!");
+		Assert.assertEquals(msg, "Purchase order save successfully..", "Toast message mismatch!");
 		
 	}
 

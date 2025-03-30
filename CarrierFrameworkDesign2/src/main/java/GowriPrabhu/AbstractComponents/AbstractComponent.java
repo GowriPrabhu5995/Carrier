@@ -22,6 +22,7 @@ public class AbstractComponent {
 
 	protected WebDriver driver;
 	Actions a ;
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 	public AbstractComponent(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 		super();
@@ -43,32 +44,32 @@ public class AbstractComponent {
 	WebElement SearchButton;
 	
 	public void waitForElementToAppear(WebElement element) {
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+	    
 	    wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
 	public void LongwaitForElementToAppear(WebElement findBy ) {
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
+	   
 	    wait.until(ExpectedConditions.visibilityOf(findBy));
 	}
 	public void waitForListOFElementsToAppear(List<WebElement> findBy) {
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	   
 	    wait.until(ExpectedConditions.visibilityOfAllElements(findBy));
 	}
 	
 	public void waitForWebElementToBeClickable(WebElement findBy) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	
 		// Thread.sleep(5000);
 		wait.until(ExpectedConditions.elementToBeClickable(findBy));
 
 	}
 	public void waitForElementToInvisible(By findBy) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(findBy));
 	}
 	
 	public void waitForElementToVisible(WebElement element ) {
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(90));
+	   
 	    wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
@@ -121,12 +122,13 @@ public void PageDownUsingActions(WebElement element) {
 	    
 	    a.moveToElement(element).sendKeys(Keys.PAGE_DOWN).perform();
 	}
-	public CreatePurchaseOrder MouseHoverToSalesManagement() {
+	public void MouseHoverToSalesManagement() {
 		waitForElementToAppear(SalesManagement);
 		hoverOverElement(SalesManagement);
-		CreatePurchaseOrder C_PO = new CreatePurchaseOrder(driver);
-		return C_PO;
+		
 	}
+	
+	
 	
 	
 	public CreatePurchaseOrder ClickOnAddProductsButton() {

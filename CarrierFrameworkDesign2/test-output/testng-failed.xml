@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GowriPrabhu.Test.PO_CreationUsing_JsonData">
+      <class name="GowriPrabhu.Test.Onboarding">
         <methods>
-          <include name="CreatePurchaseOrder" invocation-numbers="0"/>
           <include name="launchApplication"/>
-          <include name="Branch_Manage_Approval"/>
           <include name="tearDown"/>
-          <include name="LoginAsCPandConfirmDirectly"/>
+          <include name="testCaseData"/>
         </methods>
-      </class> <!-- GowriPrabhu.Test.PO_CreationUsing_JsonData -->
+      </class> <!-- GowriPrabhu.Test.Onboarding -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
